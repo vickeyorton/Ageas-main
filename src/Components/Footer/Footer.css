@@ -1,0 +1,186 @@
+.Footer-Page{
+    margin: 0 auto;
+    padding: 48px 0;
+    background-color: #646464;
+    color: #fff;
+}
+.Footer-Page-Container{
+    max-width: 1200px;
+    margin:auto;
+    padding: 0px 15px;
+}
+.Footer-Section{
+    display: flex;
+    flex-direction: column;
+}
+.footer-nav__list {
+    list-style: none;
+    margin-left: 0;
+    display: none;
+    padding-bottom: 20px;
+    padding-left: 0px;
+}
+.footer-nav__item {
+    position: relative;
+}
+.footer-nav__item:before {
+    content: "";
+    display: inline-block;
+    background: url(https://www.ageas.co.uk/Static/images/svg/icon-arrow-white.svg) 50% no-repeat;
+    background-size: 12px 8px;
+    transform: rotate(-90deg);
+    width: 12px;
+    height: 8px;
+    float: left;
+    top: 6px;
+    position: absolute;
+    left: 0;
+}
+.footer-nav__link {
+    color: #fff!important;
+    text-decoration: none;
+    padding: 0 10px 10px 20px;
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+    text-align: left;
+}
+.footer-nav__link:hover {
+    text-decoration: underline;
+}
+.Footer-Legal-Wrap{
+    position: relative;
+}
+.footer-legal__content {
+    font-size: 12px;
+    color: #fff;
+    display: none;
+}
+.footer-legal__address, .footer-legal__registered {
+    width: 100%;
+    display: block;
+}
+.footer-legal__address, .footer-legal__registered {
+    width: 100%;
+    display: block;
+}
+.footer-legal__registered p {
+    max-width: 450px;
+}
+.footer-logo-link {
+    padding-top: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.Nav-Container-Heading {
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.Nav-Container-Heading::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(https://www.ageas.co.uk/Static/images/svg/icon-arrow-white.svg) 50% no-repeat;
+    background-size: 12px 8px;
+    width: 12px;
+    height: 8px;
+    transition: transform .2s linear;
+}
+
+
+@media screen and (min-width: 0) and (max-width: 991px){
+    .footer-logo {
+        width: 90px;
+    }
+}
+
+
+@media screen and (min-width : 768px) and (max-width : 1024px){
+    .Footer-Section{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .Nav-Container:first-child {
+        margin-left: 0px;
+    }
+    .Nav-Container{
+        width: calc(33.33333% - 35px);
+        padding-bottom: 20px;
+        margin-left: 35px;
+    }
+    .Footer-Legal-Wrap  {  
+        border-top: 1px solid #fff;
+        width: 100%;
+        padding-top: 20px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .footer-lega__vat:first-child, .footer-legal__address:first-child, .footer-legal__registered:first-child {
+        margin-left: 0;
+    }
+    .footer-lega__vat, .footer-legal__address, .footer-legal__registered {
+        width: 33.33333%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .Footer-Section{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .Footer-Legal-Wrap{
+        border-left: 1px solid #fff;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width : 768px){
+    .Nav-Container-Heading{
+        color: #fff;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        cursor: auto;
+        text-align: left;
+    }
+    .footer-legal, .Nav-Container {
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+    .footer-nav__list {
+        display: block;
+    }
+    .Footer-Legal-Wrap{
+        flex-grow: 1;
+    }
+    .footer-legal__content {
+        display: block;
+    }
+    .footer-lega__vat, .footer-legal__address, .footer-legal__registered {
+        display: block;
+        text-align: left;
+    }
+    .Nav-Container-Heading:after {
+        background: none;
+    }
+    .footer-logo-link {
+        width: 108px;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        padding-top: 20px;
+    }
+}

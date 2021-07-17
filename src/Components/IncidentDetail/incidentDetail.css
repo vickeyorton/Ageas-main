@@ -1,0 +1,89 @@
+.Incident-Container{
+    max-width: 1200px;
+    margin: auto;
+}
+.col-12{
+    width: 100%;
+}
+.Section-2{
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.Section-2-Header{
+    padding: 15px;
+    font-size: 20px;
+    background: #8e419c;
+    color:#fff;
+    text-align: center;
+}
+.Incident-Section-Body{
+    padding: 15px;
+    box-shadow: 0px 4px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
+}
+.headingText{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.labelTextIncident{
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: -12px;
+}
+.inputFieldCss {
+    width: 50%;
+    padding: 5px;
+    margin-top: 14px;
+    margin-bottom: 15px;
+}
+.optionDropDown{
+    padding: 7px;
+    width: 100%;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+.buttoncontinueStyle{
+    background-color: rgb(111, 163,19);
+    color: white;
+    border: 1px solid rgb(111, 163, 19);
+    border-radius: 26px;
+    padding: 10px 22px;
+}
+
+.buttonBackStyle{
+    background-color: white;
+    color: rgb(111, 163,19);
+    border: 1px solid rgb(111, 163, 19);
+    border-radius: 26px;
+    padding: 10px 22px;
+}
+.ContinueButton-Section{
+    display: flex;
+    justify-content: flex-end;
+}
+.cardetail{
+    border-radius:5px !important;
+    border: 2px solid rgb(142,65,156) !important;
+}
+.Incident-Select{
+    width: 30%;
+    margin: 3px;
+    height: 25px;
+}
+.padding-vertical-5{
+    padding: 5px 0px;
+}
+
+/* Mobile Only */
+@media only screen and (max-width : 768px){
+    .inputFieldCss {
+        width: 100%;
+        padding: 5px;
+        margin-top: 14px;
+        margin-bottom: 15px;
+    }
+}
