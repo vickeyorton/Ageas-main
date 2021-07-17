@@ -8,6 +8,7 @@ import incident from "./Components/IncidentDetail/incidentDetail";
 import contact from "./Components/ContactDetail/Contactdetails";
 import involved from "./Components/InvolvedPartydetails/InvolvedPartyDetails";
 import thankyou from "./Components/Thankyou/Thankyou"
+import AddPassenger from "./Components/InvolvedPartydetails/AddPassenger/AddPassenger";
 
 function Routing() {
     return (
@@ -23,6 +24,7 @@ function Routing() {
                         <Route path="/contact" exact component={contact}/>
                         <Route path="/involved" exact component={involved}/>
                         <Route path="/thankyou" exact component={thankyou}/>
+                        <Route path="/addpassenger"  exact component={AddPassenger} />
                     </Switch>
                 </div>
             </BrowserRouter>
