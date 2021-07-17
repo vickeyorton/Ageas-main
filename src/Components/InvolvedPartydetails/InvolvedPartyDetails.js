@@ -3,6 +3,8 @@ import "./InvolvedPartyDetails.css";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { GET_INVOLVED } from "../../Redux/actions";
+import Stepper from './Stepper/Stepper';
+import LogoHeader from '../LogoHeader/LogoHeader';
 // import CarInfo from "../Home/CarInfo/CarInfo";
 // import login from "../Login/Login.css";
 // import "../IncidentDetail/incidentDetail.css";
@@ -38,8 +40,13 @@ function InvolvedPartyDetails(props) {
     props.passData(invObj);
     history.push("/summary");
   };
+  const onEdit = ()=>{
+    history.push("/addpassenger");
+  }
   return (
-    <div className="row">
+    <div className="row2">
+      <LogoHeader/>
+      <Stepper />
       <div className="col-lg-6 col-md-12 col-sm-12">
         <div className="Section-2">
           <div className="Section-2-Header">Involved parties detail</div>
@@ -94,14 +101,15 @@ function InvolvedPartyDetails(props) {
                       Index is: {index}, No of items: {val}
                     </div>
                     <div className="Passenger-buttons">
-                      <a href="/addpassenger">
-                        {" "}
+                      
+                        
                         <input
                           type="button"
                           value="Edit"
                           className="pass-button"
+                          onClick={()=>{onEdit(index)}}
                         />
-                      </a>
+                      
                       <a
                         onClick={() => {
                           deleteItem(index);
@@ -148,13 +156,14 @@ function InvolvedPartyDetails(props) {
                 {" "}
                 <input type="button" value="Back" className="buttonBackStyle" />
               </a>
-              <a href="/summary" onClick={() => onContinue()}>
+              
                 <input
+                onClick={() => onContinue()}
                   type="button"
                   value="Continue"
                   className="buttoncontinueStyle"
                 />
-              </a>
+              
             </div>
           </div>
         </div>

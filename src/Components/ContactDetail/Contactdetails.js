@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./ContactDetails.css";
-import "../IncidentDetail/incidentDetail.css";
+// import "../IncidentDetail/incidentDetail.css";
+import Stepper from './Stepper/Stepper';
+import LogoHeader from '../LogoHeader/LogoHeader';
 import { SettingsSystemDaydreamOutlined } from "@material-ui/icons";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -22,7 +24,11 @@ function Contactdetails(props) {
     history.push("/involved");
   };
   return (
-    <div className="row">
+    <div className="row1">
+        <LogoHeader/>
+        <Stepper/>
+        
+      
       <div className="col-lg-6 col-md-12 col-sm-12">
         <div className="Section-2">
           <div className="Section-2-Header">Contact details</div>
@@ -89,13 +95,14 @@ function Contactdetails(props) {
             </div>
             <div className="Bottom-buttons">
               <input type="button" value="Back" className="buttonBackStyle" />
-              <a href="/involved" onClick={() => onClickHandler()}>
+              
                 <input
+                onClick={() => onClickHandler()}
                   type="button"
                   value="Continue"
                   className="buttoncontinueStyle"
                 />
-              </a>
+              
             </div>
           </div>
         </div>

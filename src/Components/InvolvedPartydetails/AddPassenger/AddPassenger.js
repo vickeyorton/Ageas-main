@@ -36,7 +36,7 @@ function AddPassenger(props) {
       Email: email,
     };
     props.passData(resObj);
-    history.push("/addpassenger");
+    history.push("/involved");
   };
   return (
     <div className="AddPassenger">
