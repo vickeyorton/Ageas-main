@@ -43,6 +43,7 @@ function Incident(props){
             }
             props.passData(incident);
             history.push('/contact');
+            // history.push('/summary');
         }
     }
     return (
