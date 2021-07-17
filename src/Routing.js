@@ -9,6 +9,7 @@ import contact from "./Components/ContactDetail/Contactdetails";
 import involved from "./Components/InvolvedPartydetails/InvolvedPartyDetails";
 import thankyou from "./Components/Thankyou/Thankyou"
 import AddPassenger from "./Components/InvolvedPartydetails/AddPassenger/AddPassenger";
+import summary from './Components/summary/summary';
 
 function Routing() {
     return (
@@ -25,6 +26,7 @@ function Routing() {
                         <Route path="/involved" exact component={involved}/>
                         <Route path="/thankyou" exact component={thankyou}/>
                         <Route path="/addpassenger"  exact component={AddPassenger} />
+                        <Route path="/summary" exact component={summary}/>
                     </Switch>
                 </div>
             </BrowserRouter>
