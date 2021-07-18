@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import "./Claim.css";
 import LogoHeader from '../LogoHeader/LogoHeader';
-// import { CheckBox, Text, StyleSheet, View } from "react-native";
 
 function Claim() {
     const history = useHistory();
@@ -16,7 +15,6 @@ function Claim() {
     const [q7,setq7] = useState("");
     const [q8,setq8] = useState("");
 
-    // const [isSelected, setSelection] = useState(false);
 
     const question1Handle = (event) =>{
         setq1(event.target.value);

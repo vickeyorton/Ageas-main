@@ -26,7 +26,7 @@ function CarInfo() {
 
     return (
         <div className="row">
-            <div className="col-lg-3 col-md-12 col-sm-12">
+            <div className="column-lg-3 column-md-12 column-sm-12">
                 <div className="Section-1">
                     <div className="Section-1-Header">
                         Had an accident or by the roadside?
@@ -34,7 +34,7 @@ function CarInfo() {
                     <Section1Accordion/>
                 </div>
             </div>
-            <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="column-lg-6 column-md-12 column-sm-12">
                 <div className="Section-2">
                     <div className="Section-2-Header">
                         How to make a claim
@@ -141,7 +141,7 @@ function CarInfo() {
                     </div>
                 </div>
             </div>
-            <div className="col-lg-3 col-md-12 col-sm-12">
+            <div className="column-lg-3 column-md-12 column-sm-12">
                 <div className="Section-1">
                     <div className="Section-1-Header">
                         FAQ

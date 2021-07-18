@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
 }
-.col-sm-12{
+.column-sm-12{
     width: 100%;
 }
 .Section-1{
@@ -86,7 +86,7 @@
 
 /* Tab */
 @media screen and (min-width : 768px) and (max-width : 1024px){
-    .col-md-12{
+    .column-md-12{
         width:100%;
     }
 
@@ -94,10 +94,10 @@
 
 /* Large */
 @media screen and (min-width: 1024px){
-    .col-lg-3{
+    .column-lg-3{
         width:25%;
     }
-    .col-lg-6{
+    .column-lg-6{
         width:50%;
     }
     .row {

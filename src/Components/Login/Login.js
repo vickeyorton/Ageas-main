@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Home/CarInfo/CarInfo.css';
 import { useHistory } from 'react-router-dom';
 import LogoHeader from '../LogoHeader/LogoHeader';
 import './Login.css'
@@ -38,7 +37,7 @@ function Login() {
                                     Forgotten Username
                                 </span>
                             </div>
-                            <input className="inputFieldCss"/>
+                            <input className="Login-inputFieldCss"/>
                             <div className="labelText">
                                 Password
                             </div>
@@ -48,7 +47,7 @@ function Login() {
                                     Forgotten Password
                                 </span>
                             </div>
-                            <input className="inputFieldCss"/>
+                            <input className="Login-inputFieldCss"/>
                             <div>
                                 <input type="button"
                                 value="Show Password"
