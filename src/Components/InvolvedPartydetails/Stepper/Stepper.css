@@ -1,0 +1,20 @@
+.Stepper-bg{
+    background: #ebebeb;
+}
+.Stepper-Container{
+    max-width: 1000px;
+    margin:auto;
+}
+.Stepper-Container-Padding{
+    padding: 20px 0px 40px 0px;
+}
+.Stepper-inline{
+    /* display: flex; */
+}
+.Stepper-inline .Stepper-Component{
+    background: transparent !important;
+    padding: 0px !important;
+}
+.Stepper-Component .MuiStepIcon-root.MuiStepIcon-active{
+    color: #000;
+}

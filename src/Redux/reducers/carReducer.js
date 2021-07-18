@@ -16,6 +16,11 @@ const CarReducer = (state = [], action) => {
           ...state,
           involved: action.payload,
         };
+        case "GET_PASSENGERS":
+        return {
+          ...state,
+          resObj: action.payload,
+        };
   
       default:
         return {
