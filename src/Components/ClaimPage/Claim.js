@@ -203,7 +203,7 @@ function Claim() {
                             <div className="Question-1">
                                 <input type="checkbox" id="questionquestion8glass" name="isquestion8Glass" value="question8glass" onChange={(e) => question8Handle(e)}
                                     />
-                                <label htmlFor="question7glass">No</label>
+                                {/* <label htmlFor="question7glass">No</label> */}
                                 Please confirm that you will take care to answer all question honestly and to the best of your knowledge. Failure to do so may affect your claim.
                             </div>
                             }
