@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddPassenger.css";
 import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import { GET_PASSENGERS } from "../../../Redux/actions";
 
 function AddPassenger(props) {
@@ -164,7 +164,7 @@ function AddPassenger(props) {
               >
                 <label onClick={() => onSubmit()}>Save</label>
 
-                <label>Cancel</label>
+                <Link to="/involved"><label>Cancel</label></Link>
               </div>
             </div>
           </div>
