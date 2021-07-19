@@ -32,6 +32,10 @@
 .Button-Container {
     margin: 10px;
 }
+.row2 .MuiStepIcon-root.MuiStepIcon-completed{
+    color: #000;
+}
+
 @media only screen and (max-device-width : 768px){
     .Button-Container > input{
         margin:-6px;
