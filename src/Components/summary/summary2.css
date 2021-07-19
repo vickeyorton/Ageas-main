@@ -1,0 +1,209 @@
+.Summary-content{
+    width: 750px;
+    margin:auto;
+    height : 1200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+}
+.Summary-heading{
+    height : 50px;
+    background-color: #8e419c;
+    color : white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    letter-spacing: -1px;
+   
+}
+
+.Summary-sec-1{
+  padding : 8px;
+}
+.Summary-sec-2{
+    padding : 8px;
+    margin-top: 0px;
+}
+.Incident-details{
+    float : left
+}
+.plus-icon{
+    float : right;
+    cursor: pointer;
+}
+
+.fa{
+    color: #8e419c;
+
+}
+
+.Incident-details-content{
+    
+    margin-top: 20px;
+    padding-left:10px
+}
+.date-time-section{
+    display : flex;
+    padding-top : 10px
+}
+.date-time { 
+    font-weight: bold;
+    margin-right: 180px;
+   
+}
+
+.vehicle-registration-section{
+    display : flex;
+    padding-top : 10px 
+}
+
+.vehicle-registration{
+    font-weight: bold;
+    margin-right: 130px;
+}
+
+.circumstance-section{
+    display : flex;
+    padding-top : 10px;
+    margin-bottom : 18px
+}
+
+.circumstance{
+    font-weight: bold;
+    margin-right: 170px;
+    
+}
+
+.circumstance-para{
+    margin-right: 130px;
+}
+.edit{
+    padding : 15px 25px;
+    border-radius: 18px;
+    background-color: white;
+    border-color: #8e419c;
+}
+.edit a{
+   color : #8e419c;
+   text-decoration: none;
+}
+.Contact-details-content{
+    
+    margin-top: 20px;
+    padding-left:10px
+}
+.home-telephone-section{
+    display : flex;
+    padding-top : 10px
+}
+.home-telephone { 
+    font-weight: bold;
+    margin-right: 150px;
+   
+}
+.mobile-telephone-section{
+    display : flex;
+    padding-top : 10px 
+}
+
+.mobile-telephone{
+    font-weight: bold;
+    margin-right: 140px;
+}
+.email-section{
+    display : flex;
+    padding-top : 10px;
+    margin-bottom : 18px
+}
+
+.email{
+    font-weight: bold;
+    margin-right: 230px;
+    
+}
+
+.email-para{
+    margin-right: 220px;
+}
+.edit{
+    padding : 15px 25px;
+    border-radius: 18px;
+    background-color: white;
+    border-color: #8e419c;
+}
+
+.Involved-parties-content{
+
+    margin-top: 20px;
+    padding-left:10px
+}
+
+.your-vehicle-section{
+    margin-bottom: 15px;
+}
+.passengers-section{
+    display : flex;
+    padding-left : 20px;
+}
+
+.passengers-heading{
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 150px;
+}
+.registration-section{
+    display : flex;
+    padding-left : 20px;
+    padding-bottom : 15px
+}
+.registration-heading{
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 180px;
+}
+.driver-section{
+    display : flex;
+    padding-left : 20px;
+    padding-bottom : 15px
+}
+.driver-heading{
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 180px;
+}
+.passengers-value-2{
+    margin-right: 320px;
+}
+
+.submit-section{
+    margin-top : 25px;
+    padding : 8px;
+}
+
+.back-button {
+   float: left;
+   
+}
+.submit-button {
+    float : right;
+}
+.edit1{
+    padding : 15px 25px;
+    border-radius: 18px;
+    background-color: white;
+    border-color : green;
+}
+
+.edit2{
+    padding : 15px 25px;
+    border-radius: 18px;
+    background-color: green;
+    border-color : green;
+}
+
+.edit1 a{
+    color : green;
+    cursor: pointer;
+}
+.edit2 a{
+    cursor : pointer;
+    text-decoration: none;
+}

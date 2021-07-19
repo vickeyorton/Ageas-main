@@ -1,209 +1,126 @@
-.Summary-content{
-    width: 750px;
-    margin:auto;
-    height : 1200px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+.Summary-Container{
+    max-width: 1200px;
+    margin: auto;
 }
-.Summary-heading{
-    height : 50px;
-    background-color: #8e419c;
-    color : white;
-    text-align: center;
-    padding-top: 20px;
+.Summary-Section{
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.Summary-Section-Header{
+    padding: 15px;
     font-size: 20px;
-    letter-spacing: -1px;
-   
+    background: #8e419c;
+    color:#fff;
+    text-align: center;
 }
-
-.Summary-sec-1{
-  padding : 8px;
+.Incident-Section-Body{
+    padding: 15px;
+    box-shadow: 0px 4px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
 }
-.Summary-sec-2{
-    padding : 8px;
-    margin-top: 0px;
+.Summary-Info-Accordion{
+    padding: 10px 0px;
 }
-.Incident-details{
-    float : left
+.Summary-Info-Accordion .MuiIconButton-root{
+    color: rgb(142 65 156);
 }
-.plus-icon{
-    float : right;
-    cursor: pointer;
+.Summary-Accordion-Title{
+    font-size: 20px;
+    color: #484848;
+    margin:0px;
 }
-
-.fa{
+.Summary-100-Width{
+    width:100%;
+}
+.Summary-Row {
+    padding: 10px 0px;
+}
+.Acc-Sub-Title{
+    font-weight: 500;
+}
+.Edit-Button-Container{
+    display: flex;
+    justify-content: flex-end;
+}
+.Summary-Edit-Button{
+    background: #fff;
     color: #8e419c;
-
+    border: 1px solid #8e419c;
+    min-width: 54px;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border-radius: 40px;
+    transition: all .3s ease;
 }
-
-.Incident-details-content{
-    
-    margin-top: 20px;
-    padding-left:10px
+.Summary-Edit-Button:hover{
+    background-color: #8e419c;
+    color: #fff;
 }
-.date-time-section{
-    display : flex;
-    padding-top : 10px
+.Summary-Sub-Info-Title{
+    font-size: 18px;
 }
-.date-time { 
-    font-weight: bold;
-    margin-right: 180px;
-   
+.Summary-Padding-10{
+    padding: 10px;
 }
-
-.vehicle-registration-section{
-    display : flex;
-    padding-top : 10px 
+.Summary-Bottom-Buttons {
+    display: flex;
+    justify-content: space-between;
 }
-
-.vehicle-registration{
-    font-weight: bold;
-    margin-right: 130px;
-}
-
-.circumstance-section{
-    display : flex;
-    padding-top : 10px;
-    margin-bottom : 18px
-}
-
-.circumstance{
-    font-weight: bold;
-    margin-right: 170px;
-    
-}
-
-.circumstance-para{
-    margin-right: 130px;
-}
-.edit{
-    padding : 15px 25px;
-    border-radius: 18px;
+.Summary-BackBtn-Style {
     background-color: white;
-    border-color: #8e419c;
+    color: rgb(111, 163,19);
+    border: 1px solid rgb(111, 163, 19);
+    border-radius: 26px;
+    padding: 10px 22px;
 }
-.edit a{
-   color : #8e419c;
-   text-decoration: none;
+.Summary-ContinueBtn-Style {
+    background-color: rgb(111, 163,19);
+    color: white;
+    border: 1px solid rgb(111, 163, 19);
+    border-radius: 26px;
+    padding: 10px 22px;
 }
-.Contact-details-content{
-    
-    margin-top: 20px;
-    padding-left:10px
-}
-.home-telephone-section{
-    display : flex;
-    padding-top : 10px
-}
-.home-telephone { 
-    font-weight: bold;
-    margin-right: 150px;
-   
-}
-.mobile-telephone-section{
-    display : flex;
-    padding-top : 10px 
+.Summary-Container .MuiStepIcon-root.MuiStepIcon-completed{
+    color: #000;
 }
 
-.mobile-telephone{
-    font-weight: bold;
-    margin-right: 140px;
-}
-.email-section{
-    display : flex;
-    padding-top : 10px;
-    margin-bottom : 18px
-}
-
-.email{
-    font-weight: bold;
-    margin-right: 230px;
-    
+/* Mobile Only */
+@media only screen and (max-width : 768px){
+    .Summary-col-sm-12{
+        width: 100%;
+    }
+    .Summary-Row {
+        width: 100%;
+    }
 }
 
-.email-para{
-    margin-right: 220px;
-}
-.edit{
-    padding : 15px 25px;
-    border-radius: 18px;
-    background-color: white;
-    border-color: #8e419c;
+/* Tab */
+@media screen and (min-width : 768px) and (max-width : 1024px){
+    .Summary-col-md-6{
+        width: 50%;
+    }
+
 }
 
-.Involved-parties-content{
-
-    margin-top: 20px;
-    padding-left:10px
+/* Large */
+@media screen and (min-width: 1024px){
+    .Summary-Row {
+        display: flex;
+        flex-direction: row;
+    }
+    .Summary-col-lg-3{
+        width: 25%;
+    }
+    .Summary-col-lg-9{
+        width: 75%;
+    }
 }
 
-.your-vehicle-section{
-    margin-bottom: 15px;
-}
-.passengers-section{
-    display : flex;
-    padding-left : 20px;
-}
-
-.passengers-heading{
-    font-weight: bold;
-    font-size: 14px;
-    margin-right: 150px;
-}
-.registration-section{
-    display : flex;
-    padding-left : 20px;
-    padding-bottom : 15px
-}
-.registration-heading{
-    font-weight: bold;
-    font-size: 14px;
-    margin-right: 180px;
-}
-.driver-section{
-    display : flex;
-    padding-left : 20px;
-    padding-bottom : 15px
-}
-.driver-heading{
-    font-weight: bold;
-    font-size: 14px;
-    margin-right: 180px;
-}
-.passengers-value-2{
-    margin-right: 320px;
-}
-
-.submit-section{
-    margin-top : 25px;
-    padding : 8px;
-}
-
-.back-button {
-   float: left;
-   
-}
-.submit-button {
-    float : right;
-}
-.edit1{
-    padding : 15px 25px;
-    border-radius: 18px;
-    background-color: white;
-    border-color : green;
-}
-
-.edit2{
-    padding : 15px 25px;
-    border-radius: 18px;
-    background-color: green;
-    border-color : green;
-}
-
-.edit1 a{
-    color : green;
-    cursor: pointer;
-}
-.edit2 a{
-    cursor : pointer;
-    text-decoration: none;
+@media screen and (min-width : 768px){
+    .Summary-Row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
 }

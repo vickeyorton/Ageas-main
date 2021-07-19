@@ -39,7 +39,7 @@ function Claim() {
     }
     const question8Handle = (event) =>{
         setq8(event.target.checked);
-        console.log(event.target.checked)
+        // console.log(event.target.checked)
     }
 
     return (
@@ -181,12 +181,12 @@ function Claim() {
                                 Did this incident involve a head on collision or a collision on a roundabout?
                                 <div className="Button-Container">
                                     <input type="radio" id="question7" name="isquestion7" value="question7"
-                                        checked={q6 === "question7"}
+                                        checked={q7 === "question7"}
                                         onChange={(e) => question7Handle(e)}/>
                                     <label htmlFor="question7">Yes</label>
 
-                                    <input type="radio" id="question7glass" name="isquestion7Glass" value="question7glass"
-                                        checked={q6 === "question7glass"}
+                                    <input type="radio" id="question7glass" name="isquestion7" value="question7glass"
+                                        checked={q7 === "question7glass"}
                                         onChange={(e) => question7Handle(e)}/>
                                     <label htmlFor="question7glass">No</label>
                                 </div>

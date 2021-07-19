@@ -1,127 +1,232 @@
-import React, {useState}from 'react'
+import React from 'react';
 import './summary.css';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import LogoHeader from "../LogoHeader/LogoHeader";
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
+import { withStyles } from '@material-ui/core/styles';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Stepper from './Stepper/Stepper';
+
+
+const Accordion = withStyles({
+    root: {
+      border: '1px solid rgba(0, 0, 0, .125)',
+      boxShadow: 'none',
+      '&:not(:last-child)': {
+        borderBottom: 0,
+      },
+      '&:before': {
+        display: 'none',
+      },
+      '&$expanded': {
+        margin: 'auto',
+      },
+    },
+    expanded: {},
+  })(MuiAccordion);
+  
+  const AccordionSummary = withStyles({
+    root: {
+      backgroundColor: '#fff',
+    //   borderBottom: '1px solid rgba(0, 0, 0, .125)',
+      marginBottom: -1,
+      minHeight: 56,
+      '&$expanded': {
+        minHeight: 56,
+      },
+    },
+    content: {
+      '&$expanded': {
+        margin: '12px 0',
+      },
+    },
+    expanded: {},
+  })(MuiAccordionSummary);
+  
+  const AccordionDetails = withStyles((theme) => ({
+    root: {
+      padding: theme.spacing(2),
+    },
+  }))(MuiAccordionDetails);
 
 
 function Summary(props) {
-    const [showIncident, setShowIncident] = useState(true);
-    const [showContact, setShowContact] = useState(true);
-    const [showParty, setShowParty] = useState(true);
+    const [expanded, setExpanded] = React.useState('panel1');
+
+    const handleChange = (panel) => (event, newExpanded) => {
+      setExpanded(newExpanded ? panel : false);
+    };
     const incident = props.incidentInfo;
-
+    const contact = props.contactInfo;
+    const involved = props.involvedInfo;
+  
     return (
-      <div className="Summary-container">
-          <LogoHeader/>
-        <div className="Summary-content">
-          <div className="Summary-heading">
-            <span>Summary details</span>
-          </div>
-          <div className="Summary-sec-1">
-            <div>
-              You have now entered all of your claim details.<br></br>
-              Please review the details below and once you are happy you can
-              submit your claim.
+        <div className="Summary-Container">
+            <LogoHeader/>
+            <Stepper/>
+            <div className="Summary-Section">
+                <div className="Summary-Section-Header">
+                Summary details
+                </div>
+                <div className="Incident-Section-Body">
+                You have now entered all of your claim details.<br></br>
+                Please review the details below and once you are happy you can
+                submit your claim.
+                    <div className="Summary-Info-Accordion">
+                        <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1d-content" id="panel1d-header">
+                            <p className="Summary-Accordion-Title">Incident details</p>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="Summary-100-Width">
+                                    <div className="Summary-Row">
+                                        <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                        Date & Time
+                                        </div>
+                                        <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                        {incident ? incident.date : "DD"}/{incident ? incident.month : "MM"}/{incident ? incident.year : "YYYY"} {incident ? incident.hour : "H"}:{incident ? incident.minute : "M"}
+                                        </div>
+                                    </div>
+                                    <div className="Summary-Row">
+                                        <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                        Vehicle registration
+                                        </div>
+                                        <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                        {incident ? incident.vehicleReg : "-"}
+                                        </div>
+                                    </div>
+                                    <div className="Summary-Row">
+                                        <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                        Circumstance
+                                        </div>
+                                        <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                        {incident ? incident.situation : "-"}
+                                        </div>
+                                    </div>
+                                    <div className="Edit-Button-Container">
+                                    <Link to="/incident"><button className="Summary-Edit-Button" type="button" >Edit</button></Link>
+                                    </div>
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2d-content" id="panel2d-header">
+                            <p className="Summary-Accordion-Title">Contact details</p>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                            <div className="Summary-100-Width">
+                                    <div className="Summary-Row">
+                                        <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                        Home telephone
+                                        </div>
+                                        <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                        {contact ? contact.homePhone : "-"}
+                                        </div>
+                                    </div>
+                                    <div className="Summary-Row">
+                                        <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                        Mobile telephone
+                                        </div>
+                                        <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                        {contact ? contact.mobilePhone : "-"}
+                                        </div>
+                                    </div>
+                                    <div className="Summary-Row">
+                                        <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                        Email
+                                        </div>
+                                        <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                        {contact ? contact.email : ""}
+                                        </div>
+                                    </div>
+                                    <div className="Edit-Button-Container">
+                                    <Link to="/contact"><button className="Summary-Edit-Button" type="button" >Edit</button></Link>
+                                    </div>
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3d-content" id="panel3d-header">
+                            <p className="Summary-Accordion-Title">Involved parties details</p>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                
+                                <div className="Summary-100-Width">
+                                    <div className="Summary-Sub-Info-Title">
+                                        Your vehicle
+                                    </div>
+                                    <div className="Summary-Padding-10">
+                                        <div className="Summary-100-Width">
+                                            <div className="Summary-Row">
+                                                <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                                No of passengers
+                                                </div>
+                                                <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                                {involved ? involved.val : "N/A"}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="Summary-Sub-Info-Title">
+                                    Their vehicle
+                                    </div>
+                                    <div className="Summary-Padding-10">
+                                        <div className="Summary-Row">
+                                            <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                            Registration
+                                            </div>
+                                            <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                            {involved ? involved.reg ? involved.reg : "N/A" : "N/A"}
+                                            </div>
+                                        </div>
+                                        <div className="Summary-Row">
+                                            <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                            Driver name
+                                            </div>
+                                            <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                            {involved ? involved.name ? involved.name : "N/A" : "N/A"}
+                                            </div>
+                                        </div>
+                                        <div className="Summary-Row">
+                                            <div className="Acc-Sub-Title Summary-col-lg-3 Summary-col-sm-12 Summary-col-md-6">
+                                            No of passengers
+                                            </div>
+                                            <div className="Summary-col-lg-9 Summary-col-sm-12 Summary-col-md-6">
+                                            {involved ? involved.passenger ? involved.passenger : "N/A" : "N/A"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="Edit-Button-Container">
+                                    <Link to="/involved"><button className="Summary-Edit-Button" type="button" >Edit</button></Link>
+                                    </div>
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                    </div>
+                    <div class="Summary-Bottom-Buttons">
+                        <Link to="/involved"> 
+                            <input type="button" class="Summary-BackBtn-Style" value="Back"/>
+                        </Link>
+                        <Link to="/thankyou"> 
+                            <input type="button" class="Summary-ContinueBtn-Style" value="Submit"/>
+                        </Link>
+                    </div>
+                </div>
             </div>
-          </div>
-          <hr></hr>
-          <div className="Summary-sec-2">
-            <span className='Incident-details'>Incident details</span>
-            <div className="plus-icon">{showIncident?<i class="fa fa-angle-up" onClick={()=>setShowIncident(!showIncident)}></i>:<i class="fa fa-angle-down" onClick={()=>setShowIncident(!showIncident)}></i>}</div>
-          </div>
-          {showIncident ? <div>
-              <div className='Incident-details-content'>
-                  <div className='date-time-section'>
-                     <div className='date-time'>Date & Time</div>
-                      <div>{incident ? incident.date : "DD"}/{incident ? incident.month : "MM"}/{incident ? incident.year : "YYYY"} {incident ? incident.hour : "H"}:{incident ? incident.minute : "M"}</div>
-                  </div>
-                  <div className='vehicle-registration-section'>
-                      <div className='vehicle-registration'>Vehicle registration</div>
-                      <div>{incident ? incident.vehicleReg : ""}</div>
-                  </div>
-                  <div className='circumstance-section'>
-                      <div className='circumstance'>Circumstance</div>
-                      <div className='circumstance-para'>{incident ? incident.situation : ""}</div>
-                      <div><button className='edit'><Link to="/incident">Edit</Link></button></div>
-                  </div>
-              </div>
-          </div> : null}
-          <hr></hr>
-          <div className="Summary-sec-2">
-            <span className='Incident-details'>Contact details</span>
-            <div className="plus-icon">{showContact?<i class="fa fa-angle-up" onClick={()=>setShowContact(!showContact)}></i>:<i class="fa fa-angle-down" onClick={()=>setShowContact(!showContact)}></i>}</div>
-          </div>
-          {showContact ? <div>
-              <div className='Contact-details-content'>
-                  <div className='home-telephone-section'>
-                     <div className='home-telephone'>Home telephone</div>
-                      <div>07733169866</div>
-                  </div>
-                  <div className='mobile-telephone-section'>
-                      <div className='mobile-telephone'>Mobile telephone</div>
-                      <div>9849223378</div>
-                  </div>
-                  <div className='email-section'>
-                      <div className='email'>Email</div>
-                      <div className='email-para'>test@ageas.co.uk</div>
-                      <div><button className='edit'><Link to="/contact">Edit</Link></button></div>
-                  </div>
-              </div>
-          </div> : null}
-          <hr></hr>
-          <div className="Summary-sec-2">
-            <span className='Incident-details'>Involved parties details</span>
-            <div className="plus-icon">{showParty?<i class="fa fa-angle-up" onClick={()=>setShowParty(!showParty)}></i>:<i class="fa fa-angle-down" onClick={()=>setShowParty(!showParty)}></i>}</div>
-          </div>
-          {showParty ? <div>
-              <div className='Involved-parties-content'>
-                  <div className='your-vehicle-section'>
-                      <div>Your vehicle</div>
-                      <div className='passengers-section'>
-                          <div className='passengers-heading'>No of passengers</div>
-                          <div className='passengers-value'>1</div>
-                      </div>
-                  </div>
-                  <div className='their-vehicle-section'>
-                    <div>Their vehicle</div> 
-                    <div className='registration-section'>
-                      <div className='registration-heading'>Registration</div>
-                          <div classNpassengers-value-2ame='registration-value'>N|A</div>
-                    </div>
-                    <div className='driver-section'>
-                      <div className='driver-heading'>Driver name</div>
-                      <div className='driver-value'>N|A</div>
-                    </div>
-                    <div className='passengers-section'>
-                          <div className='passengers-heading'>No of passengers</div>
-                          <div className='passengers-value-2'>1</div>
-                          <div><button className='edit'><Link to="/involved">Edit</Link></button></div>
-                    </div>
-
-                 </div>
-              </div>
-          </div> : null}
-           <div className='submit-section'>
-               <div className='back-button'>
-                   <button className='edit1'><Link to="/involved">Back</Link></button>
-                </div>
-               <div className='submit-button'>
-                   <button className='edit2'><Link to="/thankyou">Submit</Link></button>
-                </div>
-           </div>
-           
-        
-          </div>
-          
         </div>
-    );
+    )
 }
+
 
 const mapStateToProps = (state) => {
     return {
         state,
         incidentInfo: state.CarReducer.incident,
+        contactInfo: state.CarReducer.contact,
+        involvedInfo:state.CarReducer.involved,
       };
       
 }

@@ -29,7 +29,7 @@ function Contactdetails(props) {
         <Stepper/>
         
       
-      <div className="col-lg-6 col-md-12 col-sm-12">
+      <div className="col-md-12 col-sm-12">
         <div className="Section-2">
           <div className="Section-2-Header">Contact details</div>
           <div className="Section-2-Body">

@@ -1,0 +1,39 @@
+.Thank-Container{
+    max-width: 1200px;
+    margin: auto;
+}
+.Thank-Width-100{
+    width:100%;
+}
+.Thank-Section{
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.Thank-Section-Header {
+    padding: 15px;
+    font-size: 20px;
+    background: #8e419c;
+    color: #fff;
+    text-align: center;
+}
+.Thank-Section-Body {
+    padding: 15px;
+    box-shadow: 0px 4px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%), 0px 1px 3px 0px rgb(0 0 0 / 20%);
+}
+.Thank-header{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+.Thank-label{
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: -12px;
+}
+
+@media screen and (min-width: 768px){
+    .Thank-Section{
+        margin-bottom: 10px;
+    }
+}
