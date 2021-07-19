@@ -10,9 +10,10 @@ import LogoHeader from '../LogoHeader/LogoHeader';
 // import "../IncidentDetail/incidentDetail.css";
 
 function InvolvedPartyDetails(props) {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(1);
   const [namesArray, setNamesArray] = useState([]);
   const handleChange = (e) => setVal(e.target.value);
+  const resObj = props.addPassenger;
 
   useEffect(() => {
     let arr = [];
@@ -98,7 +99,7 @@ function InvolvedPartyDetails(props) {
                 namesArray.map((index) => (
                   <div key={index} className="Passenger-box">
                     <div>
-                      Index is: {index}, No of items: {val}
+                      {resObj?resObj.firstName:"User Name"}
                     </div>
                     <div className="Passenger-buttons">
                       
