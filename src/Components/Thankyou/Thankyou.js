@@ -9,7 +9,7 @@ function Thankyou() {
             <div className="Thank-Width-100">
                 <div className="Thank-Section">
                     <div className="Thank-Section-Header">
-                        summary detail
+                        Thank you 
                     </div>
                     <div className="Thank-Section-Body">
                         <div className="Thank-header">

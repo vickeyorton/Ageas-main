@@ -76,7 +76,9 @@ function Summary(props) {
                 Please review the details below and once you are happy you can
                 submit your claim.
                     <div className="Summary-Info-Accordion">
-                        <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                        <Accordion 
+                        // square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
+                        defaultExpanded={true}>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1d-content" id="panel1d-header">
                             <p className="Summary-Accordion-Title">Incident details</p>
                             </AccordionSummary>
@@ -112,7 +114,9 @@ function Summary(props) {
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                        <Accordion 
+                        // square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
+                        defaultExpanded={true}>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2d-content" id="panel2d-header">
                             <p className="Summary-Accordion-Title">Contact details</p>
                             </AccordionSummary>
@@ -148,7 +152,9 @@ function Summary(props) {
                                 </div>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                        <Accordion 
+                        // square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}
+                        defaultExpanded={true}>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3d-content" id="panel3d-header">
                             <p className="Summary-Accordion-Title">Involved parties details</p>
                             </AccordionSummary>

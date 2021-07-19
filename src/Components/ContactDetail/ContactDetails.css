@@ -36,12 +36,55 @@
 .row1 .MuiStepIcon-root.MuiStepIcon-completed{
     color: #000;
 }
+.Notification-Button-Container {
+    margin: 10px;
+}
+  
+  .Notification-Button-Container input[type="radio"] {
+    opacity: 0;
+    position: relative;
+    width: 0;
+  }
+  
+  .Notification-Button-Container label {
+      display: inline-block;
+      background-color: #fff;
+      padding: 10px 20px;
+      font-family: sans-serif, Arial;
+      font-size: 16px;
+      border-radius: 40px;
+      margin-left: 10px;
+      transition: all .3s ease;
+      overflow: hidden;
+      color: #8e419c;
+      border: 1px solid #8e419c;
+      min-width: 54px;
+      text-align: center;
+  }
+  
+  .Notification-Button-Container label:hover {
+    background-color: #8e419c;
+      color: #fff;
+  }
+  
+  .Notification-Button-Container input[type="radio"]:checked + label {
+      background-color: #8e419c;
+      border-color: #8e419c;
+      color: #fff;
+  }
 
-@media only screen and (max-device-width : 768px){
+@media only screen and (max-width : 768px){
     .Button-Container > input{
         margin:-6px;
     }
     .Button-Container {
+        margin: 10px;
+        display: grid;
+    }
+    .Notification-Button-Container > input{
+        margin:-6px;
+    }
+    .Notification-Button-Container {
         margin: 10px;
         display: grid;
     }

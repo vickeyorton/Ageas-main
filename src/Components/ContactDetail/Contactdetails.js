@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import "./ContactDetails.css";
-// import "../IncidentDetail/incidentDetail.css";
 import Stepper from './Stepper/Stepper';
 import LogoHeader from '../LogoHeader/LogoHeader';
-import { SettingsSystemDaydreamOutlined } from "@material-ui/icons";
 import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import { GET_CONTACT } from "../../Redux/actions";
 
 function Contactdetails(props) {
   const [mobilePhone, setMobilePhone] = useState(null);
   const [homePhone, setHomePhone] = useState(null);
   const [email, setEmail] = useState(null);
+  const [q1,setq1] = useState("");
 
+  const question1Handle = (event) =>{
+    setq1(event.target.value);
+}
   const history = useHistory();
   const onClickHandler = () => {
     const conObj = {
@@ -56,7 +58,20 @@ function Contactdetails(props) {
             </div>
             <div style={{ "margin-bottom": "10px", "font-size": "14px" }}>
               {mobilePhone != null ? (
-                <div>Mobile Number : "{mobilePhone}"</div>
+                <div className="Question-Notification">
+                  Do you need SMS notification to this number?
+                  <div className="Notification-Button-Container">
+                      <input type="radio" id="notification" name="isNotification" value="notification"
+                          checked={q1 === "notification"}
+                          onChange={(e) => question1Handle(e)}/>
+                      <label htmlFor="notification">Yes</label>
+                      <input type="radio" id="notNotification" name="isNotification" value="notNotification"
+                          checked={q1 === "notNotification"}
+                          onChange={(e) => question1Handle(e)}/>
+                      <label htmlFor="notNotification">No</label>
+                      
+                  </div>
+                </div>
               ) : null}
             </div>
             <div>
@@ -80,7 +95,7 @@ function Contactdetails(props) {
                   value="existing"
                 />
                 <label htmlFor="existing" className="cardetail">
-                  MR Daniel
+                  Mr. Daniel
                 </label>
                 <input
                   type="radio"
@@ -94,7 +109,7 @@ function Contactdetails(props) {
               </div>
             </div>
             <div className="Bottom-buttons">
-              <input type="button" value="Back" className="buttonBackStyle" />
+              <Link to="/incident"><input type="button" value="Back" className="buttonBackStyle" /></Link>
               
                 <input
                 onClick={() => onClickHandler()}

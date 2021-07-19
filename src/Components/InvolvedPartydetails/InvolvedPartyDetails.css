@@ -36,7 +36,7 @@
     color: #000;
 }
 
-@media only screen and (max-device-width : 768px){
+@media only screen and (max-width : 768px){
     .Button-Container > input{
         margin:-6px;
     }
@@ -44,9 +44,9 @@
         margin: 10px;
         display: grid;
     }
-    .Passenger-box{
+    .Involved-Passenger-box{
         display: grid;
-        width:100%;
+        width:auto;
         border:1px solid rgba(128, 128, 128, 0.507);
         margin-top: 5px;
         padding:5px;    
@@ -123,6 +123,9 @@
     .Section-1,.Section-2{
         margin-bottom: 10px;
     }
+    .Passengers-details-box .Involved-Passenger-box{
+        width:500px;
+    }
 }
 
 .contentdropdown{
@@ -141,10 +144,8 @@
     padding: 10px 22px;
     margin-right:  5px;
 }
-.Passengers-details-box .Passenger-box{
-    width:100%;
-}
-.Passenger-box{
+
+.Involved-Passenger-box{
     display: flex;
     justify-content: space-between;
     border:1px solid rgba(128, 128, 128, 0.507);

@@ -47,11 +47,12 @@ function Login() {
                                     Forgotten Password
                                 </span>
                             </div>
-                            <input className="Login-inputFieldCss"/>
+                            <input type="password" className="Login-inputFieldCss"/>
                             <div>
                                 <input type="button"
                                 value="Show Password"
                                 className = "ButtonStylePassword"
+                                
                                 />
                             </div>
                             <div className="Button-Center">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./InvolvedPartyDetails.css";
 import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { GET_INVOLVED } from "../../Redux/actions";
 import Stepper from './Stepper/Stepper';
 import LogoHeader from '../LogoHeader/LogoHeader';
@@ -97,7 +97,7 @@ function InvolvedPartyDetails(props) {
               Please enter the details of your passengers where known
               {namesArray &&
                 namesArray.map((index) => (
-                  <div key={index} className="Passenger-box">
+                  <div key={index} className="Involved-Passenger-box">
                     <div>
                       {resObj?resObj.firstName:"User Name"}
                     </div>
@@ -111,17 +111,15 @@ function InvolvedPartyDetails(props) {
                           onClick={()=>{onEdit(index)}}
                         />
                       
-                      <a
-                        onClick={() => {
-                          deleteItem(index);
-                        }}
-                      >
+                    
                         <input
                           type="button"
                           value="Clear"
                           className="pass-button"
+                          onClick={() => {
+                            deleteItem(index);
+                          }}
                         />
-                      </a>
                     </div>
                   </div>
                 ))}
@@ -153,10 +151,10 @@ function InvolvedPartyDetails(props) {
               </div>
             </div>
             <div className="Bottom-buttons">
-              <a href="/contact">
+              <Link to="/contact">
                 {" "}
                 <input type="button" value="Back" className="buttonBackStyle" />
-              </a>
+              </Link>
               
                 <input
                 onClick={() => onContinue()}
